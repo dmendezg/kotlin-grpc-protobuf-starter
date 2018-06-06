@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.dmendezg";
+
+message HelloWorldRequest {
+    string input = 1;
+}
+
+message HelloWorldResponse {
+    string output = 1;
+}
+
+service HelloWorldService {
+    rpc Execute (HelloWorldRequest) returns (HelloWorldResponse);
+}
